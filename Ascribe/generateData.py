@@ -51,8 +51,8 @@ for i in range(LOWER_RANGE,len(lines)):
             trainingJson += '{"role": "assistant", "content": ' + json.dumps(cleanedCompletion) + '}]}'
             trainingJson +='\n' 
             print(i)
-			if i%50==0:
-				print(i + " lines parsed")
+            if i%50==0:
+                print(i + " lines parsed")
             g.write(trainingJson)
         
         except:
